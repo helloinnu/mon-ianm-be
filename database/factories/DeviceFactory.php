@@ -18,8 +18,9 @@ class DeviceFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
+            'type_device' => $this->faker->randomElement(['f5', 'tplink', 'totolink']),
             'ip_address' => $this->faker->ipv4,
-            'type' => $this->faker->randomElement(['router-client', 'router-core', 'access_point', 'switch']),
+            'type' => $this->faker->randomElement(['core', 'edge', 'client']),
             'location' => $this->faker->city,
             'username' => $this->faker->userName,
             'password' => $this->faker->password,
