@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Package;
+use App\Models\Device;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Client>
@@ -22,8 +25,8 @@ class ClientFactory extends Factory
         'location' => $this->faker->address,
         'status' => $this->faker->randomElement(['active', 'inactive', 'paused']),
         'start_date' => $this->faker->dateTimeBetween('-1 year', 'now')->format('Y-m-d'),
-        'package_id' => \App\Models\Package::inRandomOrder()->first()?->id ?? 1,
-        'device_id' => \App\Models\Device::factory()
+        'package_id' => Package::inRandomOrder()->first()->id,
+        'device_id' => Device::inRandomOrder()->first()->id
         ];
     }
 }

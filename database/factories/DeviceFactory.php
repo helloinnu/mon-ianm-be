@@ -19,7 +19,7 @@ class DeviceFactory extends Factory
         return [
             'name' => $this->faker->word,
             'ip_address' => $this->faker->ipv4,
-            'type' => $this->faker->randomElement(['router', 'switch', 'access_point']),
+            'type' => $this->faker->randomElement(['router-client', 'router-core', 'access_point', 'switch']),
             'location' => $this->faker->city,
             'username' => $this->faker->userName,
             'password' => $this->faker->password,

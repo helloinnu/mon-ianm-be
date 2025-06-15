@@ -14,8 +14,9 @@ class ConnectionFactory extends Factory
     public function definition(): array
     {
         return [
-            'client_id' => Client::inRandomOrder()->first()?->id ?? Client::factory(),
-            'device_id' => Device::inRandomOrder()->first()?->id ?? Device::factory(),
+            // 'client_id' => Client::inRandomOrder()->first()?->id ?? Client::factory(),
+            'client_id' => Client::inRandomOrder()->first()->id,
+            'device_id' => Device::inRandomOrder()->first()->id,
             'status' => $this->faker->randomElement(['online', 'offline', 'unknown']),
             'latency_ms' => $this->faker->numberBetween(1, 300),
             'checked_at' => now()->subMinutes(rand(1, 60)),

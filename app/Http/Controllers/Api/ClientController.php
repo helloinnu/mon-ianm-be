@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Client;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class ClientController extends Controller
 {
@@ -14,14 +15,15 @@ class ClientController extends Controller
      */
     public function index()
     {   
+        // dd($request()->user());
         try {
             // Coba ambil data dari Redis
             $clients = Cache::store('redis')->remember('clients.all', now()->addDays(1), function () {
-                return \App\Models\Client::all();
+                return Client::all();
             });
         } catch (\Exception $e) {
             // Jika Redis gagal, fallback ke database
-            \Log::warning('Redis cache failed: ' . $e->getMessage());
+            Log::warning('Redis cache failed: ' . $e->getMessage());
             $clients = Client::all();
         }
     

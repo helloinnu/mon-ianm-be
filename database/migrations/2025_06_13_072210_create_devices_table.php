@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('ip_address', 45);
-            $table->enum('type', ['router', 'access_point', 'switch'])->default('access_point');
+            $table->enum('type', ['router-client', 'router-core', 'access_point', 'switch'])->default('router-client');
             $table->text('location')->nullable();
             $table->string('username')->nullable();
             $table->string('password')->nullable(); // disarankan terenkripsi

@@ -15,9 +15,16 @@ Route::prefix('v1')->group(function () {
     });
 
     Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+        Route::prefix('clients')->group(function () {
+            Route::get('/', [ClientController::class, 'index']);
+            Route::post('/', [ClientController::class, 'store']);
+            Route::get('{id}', [ClientController::class, 'show']);
+            Route::put('{id}', [ClientController::class, 'update']);
+            Route::delete('{id}', [ClientController::class, 'destroy']);
+        });
 
     });
-    
+
     // User management routes
     // Route::prefix('users')->group(function () {
     //     Route::get('/', [UserController::class, 'index']);
@@ -28,13 +35,6 @@ Route::prefix('v1')->group(function () {
     // });
 
     // Client management routes
-    Route::prefix('clients')->group(function () {
-        Route::get('/', [ClientController::class, 'index']);
-        Route::post('/', [ClientController::class, 'store']);
-        Route::get('{id}', [ClientController::class, 'show']);
-        Route::put('{id}', [ClientController::class, 'update']);
-        Route::delete('{id}', [ClientController::class, 'destroy']);
-    });
 });
 
 
