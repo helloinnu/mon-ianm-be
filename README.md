@@ -78,8 +78,8 @@ IANM Monitoring adalah aplikasi backend berbasis Laravel untuk memantau koneksi 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/username/ianm-monitoring.git
-cd ianm-monitoring
+git clone https://github.com/helloinnu/mon-ianm-be.git
+cd mon-ianm-be
 ```
 
 ### 2. Install Dependensi
@@ -147,7 +147,7 @@ php artisan queue:work --daemon
 
 ## 📬 Kontribusi
 
-Pull request dan kontribusi sangat terbuka! Silakan fork repository ini, buat perubahan yang diperlukan, dan ajukan PR. Untuk laporan bug atau permintaan fitur, gunakan tab [Issues](https://github.com/username/ianm-monitoring/issues).
+Pull request dan kontribusi sangat terbuka! Silakan fork repository ini, buat perubahan yang diperlukan, dan ajukan PR. Untuk laporan bug atau permintaan fitur, gunakan tab [Issues](https://github.com/helloinnu/mon-ianm-be/issues).
 
 ---
 
