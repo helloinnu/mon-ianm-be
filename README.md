@@ -105,9 +105,9 @@ php artisan key:generate
 Edit file `.env` untuk mengatur:
 
 -   Konfigurasi database (`DB_*`)
--   Pengaturan Redis (jika digunakan)
+-   Pengaturan Redis
 -   Pengaturan email (`MAIL_*`)
--   API token Telegram (jika digunakan)
+-   API token Telegram
 
 ### 4. Migrasi Database
 
