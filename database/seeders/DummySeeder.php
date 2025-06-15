@@ -14,8 +14,8 @@ class DummySeeder extends Seeder
      */
     public function run(): void
     {     
-        Device::factory()->count(1200)->create();
-        Client::factory()->count(1000)->create();
-        Connection::factory()->count(1000)->create();
+        Device::factory()->count(5200)->create();
+        Client::factory()->count(5000)->create();
+        Connection::factory()->count(5000)->create();
     }
 }
