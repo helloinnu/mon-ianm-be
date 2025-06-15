@@ -16,6 +16,7 @@ class Device extends Model
      */
     protected $fillable = [
         'name',
+        'type_device',
         'ip_address',
         'type',
         'location',
