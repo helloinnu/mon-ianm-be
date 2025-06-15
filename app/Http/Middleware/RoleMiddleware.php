@@ -13,7 +13,7 @@ class RoleMiddleware
         $user = $request->user();
 
         if (!$user || $user->role !== $role) {
-            return response()->json(['message' => 'Forbidden'], 403);
+            return response()->json(['message' => 'Unauthorized'], 401);
         }
 
         return $next($request);

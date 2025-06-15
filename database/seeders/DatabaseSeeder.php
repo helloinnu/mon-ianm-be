@@ -10,8 +10,10 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             PackageSeeder::class,
-            DummySeeder::class,
-            UserSeeder::class,
+            ...(config('app.env') === 'local' ? [
+                DummySeeder::class,
+                UserSeeder::class
+            ] : []),
         ]);
     }
 }

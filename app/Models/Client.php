@@ -21,4 +21,5 @@ class Client extends Model
     protected $casts = [
         'start_date' => 'date',
     ];
+    
 }
