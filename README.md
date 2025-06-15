@@ -147,7 +147,7 @@ php artisan queue:work --daemon
 
 ## 📬 Kontribusi
 
-Pull request dan kontribusi sangat terbuka! Silakan fork repository ini, buat perubahan yang diperlukan, dan ajukan PR. Untuk laporan bug atau permintaan fitur, gunakan tab [Issues](https://github.com/username/ianm-monitoring/issues).
+Pull request dan kontribusi sangat terbuka! Silakan fork repository ini, buat perubahan yang diperlukan, dan ajukan PR. Untuk laporan bug atau permintaan fitur, gunakan tab [Issues](https://github.com/helloinnu/mon-ianm-be/issues).
 
 ---
 
