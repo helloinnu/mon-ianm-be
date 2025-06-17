@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('type_device')->default('tenda');
             $table->string('ip_address', 45);
-            $table->enum('type', ['router-client', 'router-core', 'access_point', 'switch'])->default('router-client');
+            $table->enum('type', ['router-client', 'router-core', 'access_point', 'switch', 'radio_client'])->default('router-client');
             $table->text('location')->nullable();
             $table->string('username')->nullable();
             $table->string('password')->nullable(); // disarankan terenkripsi

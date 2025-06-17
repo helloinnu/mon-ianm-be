@@ -20,7 +20,7 @@ class DeviceFactory extends Factory
             'name' => $this->faker->word,
             'type_device' => $this->faker->randomElement(['tenda', 'tplink', 'totolink']),
             'ip_address' => $this->faker->ipv4,
-            'type' => $this->faker->randomElement(['core', 'edge', 'client']),
+            'type' => $this->faker->randomElement(['router-client', 'router-core', 'access_point', 'switch','radio_client']),
             'location' => $this->faker->city,
             'username' => $this->faker->userName,
             'password' => $this->faker->password,
